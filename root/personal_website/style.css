@@ -1,0 +1,172 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding-bottom: 120px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:  	#282b30;
+}
+
+header {
+  background: var(--dark-bg);
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 0% !important;
+}
+
+section {
+  grid-column: 3 / 11;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+.left {
+  grid-column: 6 / 12;
+}
+
+#head_p {
+  margin: 0% !important;
+  font-family: 'Montserrat';
+}
+
+.about-me {
+  grid-column: 2 / span 10;
+  line-height: 1.02;
+  margin-bottom: 1000px;
+}
+
+.about-me h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 150%;
+  text-align: center;
+}
+
+.about-me p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: medium;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr)
+}
+
+#calendar {
+  grid-column: 4 / span 6;
+}
+
+.buttons {
+  grid-column: 2 / span 4;
+  text-align: center;
+  color: white;
+  overflow-x: hidden;
+}
+
+.buttons a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-family: 'Bebas Neue';
+  font-size: 1.9em;
+  margin-left: 2%;
+}
+
+.projects {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 0%;
+  background: none;
+  padding-top: 0%;
+  max-height: 90vh;
+  max-width: 90vw;
+}
+
+#projects {
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0%;
+  padding: 0%;
+  padding-left: 1%;
+  line-height: 0;
+  background: none;
+  grid-column: 0 / span 12;
+  /* writing-mode: vertical-lr;
+  text-orientation: upright; */
+}
+
+.card { 
+  grid-column: 4 / 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2%;
+  padding-bottom: 1%;
+  }
+
+.card section {
+  margin-bottom: 10%;
+}
+
+.card > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  grid-column: span 4;
+  grid-row: span 1;
+  display: grid;
+  place-items: center;
+}
+
+.card h3 {
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0.5%;
+}
+
+.card p {
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: small;
+}
+
+.card > article img {
+  max-width: 75%;
+}
+
+.card_text {
+  padding: 0 20px 20px;
+}
+
+.card_text > button {
+  background: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  }

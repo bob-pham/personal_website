@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image.png" href="images/blog.png">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="calendar.css"/>
+    <title>Bob Pham</title>
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+    <main>
+
+      <section style="grid-column: 1 / span 12 ;padding: 0px; margin-bottom: 0px;">
+        <div class="header">
+          <header style="grid-column: 1 / span 7;">
+            <h1 style="margin: 0%; font-size: 2em; font-family: 'Bebas Neue', sans-serif;">Bob Pham</h1>
+            <p id="heade_p" style="  margin: 0%; font-family: 'Montserrat'; font-size: 0.5em;">Software Engineer / Student</p>
+          </header>
+          <div style="grid-column: 8 / span 12; margin-right: 10%;" id="calendar" class="calendar"> Loading the data just for you. </div>
+        </div>
+      </section>
+
+      <section style="grid-column: 1 / span 12; margin-bottom: 165%; padding: 0%; max-height: 5%; overflow-y: hidden;">
+        <div class="info">
+          <div class="buttons">
+            <a href="resume.html" target="_blank">
+              <img src="images\resume.png" alt="" width=25px height=25px>
+              About Me/Resume
+            </a>
+            <a href="projects.html" target="_blank">
+              <img src="images\projects.png" alt="" width=25px height=25px>
+              Projects
+            </a>
+            
+            <a href="https://github.com/bob-pham" target="_blank">
+              <img src="images\github.png" alt="" width=25px height=25px> 
+              GitHub
+            </a>
+            
+            <a href="https://www.linkedin.com/in/bob-pham-bbb62b218" target="_blank">
+              <img src="images\linkedin.png" alt="" width=25px height=25px>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section style="margin-bottom: 340%;" id="about_me" class="about-me">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm Bob.
+        </p>
+
+        <p>
+          I am a second-year computer science student at the University of British Columbia and an aspiring software engineer. I am passionate about programming and am continually striving to push my abilities to the next level, understand new technologies, and learn industry practices.
+        </p>
+
+        <p>
+          I currently have several noteworthy technical projects. I and a team of three others developed an android health app, Hercules. The app incentivizes users to build healthy habits by gamifying healthy living through a quest system. I implemented the backend systems which managed our user experience, in-game currency, item-inventory, and item-shop systems. I developed a simple algorithm to handle the quest and questline distribution system, where users would be rewarded based on consistent continual progress. Hercules is currently available as a proof of concept on my GitHub page. I also have experience working with the web development paradigms of HTML, CSS, JavaScript, and React. I used these technologies to build my portfolio site and a homework managing Chrome Extension, which generates daily to-do lists that would prioritize assignments based on deadlines and weight. Currently, I am working on 'Cornucopia,' an app that scans a user's grocery recipe to help manage their pantry and minimize food waste.
+        </p>
+
+        <p>
+          For a full list of my projects and technical skills, please view my GitHub
+        </p>
+
+        <p>
+          I am currently interested in internship opportunities. Message me for all inquiries and/or if you're interested in working together on a project!
+        </p>
+
+      </section>
+
+      <section id="projects">
+        <h1>Technical Projects</h1>
+      </section>
+      <section class="projects">
+        <h3>Completed Projects</h3>
+        <div id="completed_projects" class="card">
+          <article>
+            <div class="card_text">
+              <h3>Hercules</h3>
+              <p> (POC) Android app developed to incentivize healthy living by gamifying healthy habits.</p>
+              <button>More Info</button>
+            </div>
+          </article>
+          <article>
+            <!-- <img src="images/simple_device_repair_manager.png" alt="simple_device_repair_manager"> -->
+            <div class="card_text">
+              <h3>Simple Device Repair Manager</h3>
+              <p>Desktop application that streamlines the computer repair process by keeping track of progress and parts.</p>
+              <button>More Info</button>
+            </div>
+          </article>
+      </div>
+      <h3>WIP Projects</h3>
+      <div id="wip_projects" class="card">
+        <article>
+          <div class="card_text">
+            <h3>Cornucopia</h3>
+            <p>App which scans user grocery reciepts to help manage user pantries and minimize food waste.</p>
+            <button>More Info</button>
+          </div>
+        </article>
+        <article>
+          <div class="card_text">
+            <h3>Advanced Homework Planner</h3>
+            <p>Google Chrome extension that manages user grades and upcoming assignment deadlines</p>
+            <button>More Info</button>
+          </div>
+        </article>
+        <article>
+          <div class="card_text">
+            <h3>Rahzel</h3>
+            <p>Snowboarding video game inspired by the SSX franchise</p>
+            <button>More Info</button>
+          </div>
+        </article>
+      </div>
+      </section>
+
+    </main>
+    <!-- Include the library. -->
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <script> GitHubCalendar(".calendar", "bob-pham", {responsive: true}); </script>  
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
