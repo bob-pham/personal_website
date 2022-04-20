@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="calendar.css"/>
+    <link rel="stylesheet" href="css/calendar.css"/>
+    <link rel="stylesheet" href="css/carousel.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Bob Pham</title>
   </head>
   <body>
@@ -83,48 +85,106 @@
         <h1>Technical Projects</h1>
       </section>
       <section class="projects">
-        <h3>Completed Projects</h3>
         <div id="completed_projects" class="card">
-          <article>
-            <div class="card_text">
-              <h3>Hercules</h3>
-              <p> (POC) Android app developed to incentivize healthy living by gamifying healthy habits.</p>
-              <button>More Info</button>
+          <div class="carousel-container">
+            <h2>Completed</h2>
+            <div class="carousel my-carousel carousel--translate">
+              <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
+              <input class="carousel__activator" type="radio" name="carousel" id="G"/>
+              <input class="carousel__activator" type="radio" name="carousel" id="H"/>
+              <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="J"></label>
+                <label class="carousel__control carousel__control--forward" for="G"></label>
+              </div>
+              <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="F"></label>
+                <label class="carousel__control carousel__control--forward" for="H"></label>
+              </div>
+              <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="G"></label>
+                <label class="carousel__control carousel__control--forward" for="I"></label>
+              </div>
+              <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="H"></label>
+                <label class="carousel__control carousel__control--forward" for="J"></label>
+              </div>
+              <div class="carousel__controls">
+                <label class="carousel__control carousel__control--backward" for="I"></label>
+                <label class="carousel__control carousel__control--forward" for="F"></label>
+              </div>
+              <div class="carousel__track">
+                <li class="carousel__slide">
+                  <h3>Hercules</h3>
+                  <p>POC android app that promotes healthy living by gamifying healthy habits</p>
+                  <button>Learn More</button>
+                </li>
+                <li class="carousel__slide">
+                  <h3>Simple Device Repair Manager</h3>
+                  <button>Learn More</button>
+                </li>
+                <li class="carousel__slide">
+                  <h3>Portfolio Website</h3>
+                  <button>Learn More</button>
+                </li>
+              </div>
+              <div class="carousel__indicators">
+                <label class="carousel__indicator" for="F"></label>
+                <label class="carousel__indicator" for="G"></label>
+                <label class="carousel__indicator" for="H"></label>
+              </div>
             </div>
-          </article>
-          <article>
-            <!-- <img src="images/simple_device_repair_manager.png" alt="simple_device_repair_manager"> -->
-            <div class="card_text">
-              <h3>Simple Device Repair Manager</h3>
-              <p>Desktop application that streamlines the computer repair process by keeping track of progress and parts.</p>
-              <button>More Info</button>
+          </div>
+      </div>
+      <div id="completed_projects" class="card">
+        <div class="carousel-container">
+          <h2>WIP</h2>
+          <div class="carousel my-carousel carousel--translate">
+            <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
+            <input class="carousel__activator" type="radio" name="carousel" id="G"/>
+            <input class="carousel__activator" type="radio" name="carousel" id="H"/>
+            <div class="carousel__controls">
+              <label class="carousel__control carousel__control--backward" for="J"></label>
+              <label class="carousel__control carousel__control--forward" for="G"></label>
             </div>
-          </article>
-      </div>
-      <h3>WIP Projects</h3>
-      <div id="wip_projects" class="card">
-        <article>
-          <div class="card_text">
-            <h3>Cornucopia</h3>
-            <p>App which scans user grocery reciepts to help manage user pantries and minimize food waste.</p>
-            <button>More Info</button>
+            <div class="carousel__controls">
+              <label class="carousel__control carousel__control--backward" for="F"></label>
+              <label class="carousel__control carousel__control--forward" for="H"></label>
+            </div>
+            <div class="carousel__controls">
+              <label class="carousel__control carousel__control--backward" for="G"></label>
+              <label class="carousel__control carousel__control--forward" for="I"></label>
+            </div>
+            <div class="carousel__controls">
+              <label class="carousel__control carousel__control--backward" for="H"></label>
+              <label class="carousel__control carousel__control--forward" for="J"></label>
+            </div>
+            <div class="carousel__controls">
+              <label class="carousel__control carousel__control--backward" for="I"></label>
+              <label class="carousel__control carousel__control--forward" for="F"></label>
+            </div>
+            <div class="carousel__track">
+              <li class="carousel__slide">
+                <h3>Hercules</h3>
+                <p>POC android app that promotes healthy living by gamifying healthy habits</p>
+                <button>Learn More</button>
+              </li>
+              <li class="carousel__slide">
+                <h3>Simple Device Repair Manager</h3>
+                <button>Learn More</button>
+              </li>
+              <li class="carousel__slide">
+                <h3>Portfolio Website</h3>
+                <button>Learn More</button>
+              </li>
+            </div>
+            <div class="carousel__indicators">
+              <label class="carousel__indicator" for="F"></label>
+              <label class="carousel__indicator" for="G"></label>
+              <label class="carousel__indicator" for="H"></label>
+            </div>
           </div>
-        </article>
-        <article>
-          <div class="card_text">
-            <h3>Advanced Homework Planner</h3>
-            <p>Google Chrome extension that manages user grades and upcoming assignment deadlines</p>
-            <button>More Info</button>
-          </div>
-        </article>
-        <article>
-          <div class="card_text">
-            <h3>Rahzel</h3>
-            <p>Snowboarding video game inspired by the SSX franchise</p>
-            <button>More Info</button>
-          </div>
-        </article>
-      </div>
+        </div>
+    </div>
       </section>
 
     </main>
