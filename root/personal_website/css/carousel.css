@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+:root {
+  --html: #E34C26;
+  --css: #2965f1;
+  --jscript: #f0db4f;
+  --java: #ed1d25;
+  --python: #4b8bbe;
+  --unreal: #8d2a31 ;
+  --cplusplus: #0080CD;
+  --default_color: #3eb049;
+}
 
 /**
   * Control & indicator mixin
 */
 .carousel {
-    height: 300px;
-    width: 400px;
+    height: 30vmax;
+    width: 30vmax;
     overflow: hidden;
     text-align: center;
     position: relative;
@@ -243,12 +256,12 @@
 
   .carousel__slide h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .carousel__slide p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .carousel--thumb .carousel__indicator {
@@ -260,5 +273,56 @@
     background-color: #fafafa;
   }
 
+  .tag {
+    background-color: var(--default_color);
+    border-radius: 1vh;
+    font-size: 1rem;
+    margin: 0;
+    color: #fff;
+    padding: 0.5% 2.5%;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .tag-html {
+    background-color: var(--html);
+  }
+
+  .tag-css {
+    background-color: var(--css);
+  }
+
+  .tag-jscript {
+    background-color: var(--jscript);
+    color: black;
+  }
+
+  .tag-java {
+    background-color: var(--java);
+  }
+
+  .tag-python {
+    background-color: var(--python);
+  }
+
+  .tag-cplusplus {
+    background-color: var(--cplusplus);
+  }
+
+  .tag-unreal {
+    background-color: var(--unreal);
+  }
 
 
+  .pages {
+      background: #F9FAFE;
+      font-family: 'Roboto', sans-serif;
+      border-radius: 1vh;
+      text-align: center;
+      text-decoration: none;
+      color:black;
+      padding: 0.5%;
+      line-height: 0;
+      font-size: 1rem;
+      margin-top: 10%;
+  }

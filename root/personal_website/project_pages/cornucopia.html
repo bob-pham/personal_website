@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/projects.css">
+    <title>Cornucopia</title>
+</head>
+<body>
+    <!-- <div class="header">
+        <img src="../images/simple_device_repair_manager.png" alt="device manager">
+    </div> -->
+    <div class="header">
+        <h1>Cornucopia</h1>
+        <!-- <a href="https://github.com/bob-pham" target="_blank">
+            <img src="../images/github.png" alt="" width=25px height=25px> 
+            GitHub
+          </a> -->
+    </div>
+    <div class="main-text">
+        <h3>Project Overview</h3>
+        <p>Cornucopia is intended to be an app which scans user grocery reciepts to help manager kitchen pantries and minimize food waste</p>
+        <h3>Development/Implementation</h3>
+        <p>As mentioned above, Cornucopia scans user grocery receipts and indexes products. This is accomplished using the OpenCV library, with text recognition being done using PyTesseract. The OpenCV library is primarily used to hold the image and trim it into the minimum size and resolution that PyTesseract can recognize. The text that PyTessesract outputs are then filtered using a combination of Python functions mutating strings and Regex. Data is parsed into relevant objects once all irrelevant information is removed, and database storage is currently being developed. </p>
+        <p>Cornucopia is being developed using test-driven development. To test the accuracy of reading and filtering text, I created a custom unit testing framework on top of Python's unittest. The framework tests the text by comparing what is read and filtered with what the tester provides in a .txt document. The tester provides an accuracy score, and if the score calculated by the framework is lower than the provided score, the test fails. Accuracy is determined by looking at the differences in frequency of the characters that appear in the document and sentence structure. </p>
+        <p>A web scraper is currently being developed to find product recalls. These would then be put into a database, which can be searched through to determine if any user products have been recalled. </p>
+        <p>The front is currently being developed; however, the backend is still the priority. Django is being used to connect our backend to its eventual frontend. The frontend is intended to use React Native, just for practice, given its incredible popularity. Both of these technologies are currently being researched. </p>
+    </div>
+    <div class="technologies">
+        <h3 class="main-text">Technologies Used:</h3>
+        <br>
+        <span class="tag tag-python">Python</span>
+        <span class="tag tag-python">DJango</span>
+        <span class="tag tag-python">OpenCV</span>
+        <span class="tag tag-jscript">JavaScript</span>
+        <span class="tag tag-python">React Native</span>
+    </div>
+    <!-- <div class="images">
+        <h3>Images</h3>
+    </div> -->
+
+</body>
+</html>

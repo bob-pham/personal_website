@@ -13,12 +13,14 @@ const SPIN_FIX_RATE = 0.05;
 // States organized [pos_from_top, x, y, z, rotation_y]
 
 const aboutMePosition = document.getElementById('about_me').getBoundingClientRect().top;
-const projectsPosition = document.getElementById('projects').getBoundingClientRect().top;
+const projectsPosition = document.getElementById('projects').getBoundingClientRect().top - document.getElementById('projects').clientHeight - document.getElementById('projects_bulk').clientHeight;
 const transitionPosition = projectsPosition - aboutMePosition;
 const initialState = [0, 0.75, 1.6, 2.5, 0];
 const aboutMeState = [aboutMePosition, 1.4, 1.7, 0, Math.PI / 2];
 const transState = [transitionPosition, 0.5, 1.6, -2, Math.PI];
-const pcState = [projectsPosition, 0.68, 1.3, -0.12, (3 * Math.PI) / 2];
+const pcState = [projectsPosition, 0.68, 1.3, -0.15, (3 * Math.PI) / 2];
+// const pcState = [projectsPosition, 0.68, 1.3, -0.12, (3 * Math.PI) / 2];
+
 
 let spinning = true;
 let hasNotStopAboutMe = true;
@@ -91,11 +93,24 @@ Array(100).fill().forEach(addStar);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-//keeps the window size 
+//keeps the window size aspect ratio 
 window.onresize = function() {
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
+
+  //makes sure positions are still properly relative to each other
+  aboutMePosition = document.getElementById('about_me').getBoundingClientRect().top;
+  projectsPosition = document.getElementById('projects').getBoundingClientRect().top - document.getElementById('projects').clientHeight - document.getElementById('projects_bulk').clientHeight;
+  transitionPosition = projectsPosition - aboutMePosition;
+  initialState = [0, 0.75, 1.6, 2.5, 0];
+  aboutMeState = [aboutMePosition, 1.4, 1.7, 0, Math.PI / 2];
+  transState = [transitionPosition, 0.5, 1.6, -2, Math.PI];
+  pcState = [projectsPosition, 0.68, 1.3, -0.12, (3 * Math.PI) / 2];
+
+  moveCamera();
+
 };
+
 
 // renderer.render(scene, camera);
 
@@ -133,12 +148,25 @@ function moveCamera() {
     camera.rotation.y = getNextPos(t, 4, aboutMeState, transState);
 
     //Spins the camera so that it looks into the monitor
-  } else if (-t > transState[0] && -t <= pcState[0]) {
+  } else if (-t > transState[0] && -t < pcState[0]) {
     camera.position.x = getNextPos(t, 1, transState, pcState);
     camera.position.y = getNextPos(t, 2, transState, pcState);
     camera.position.z = getNextPos(t, 3, transState, pcState);
     camera.rotation.y = getNextPos(t, 4, transState, pcState);
+  } else if (-t >= pcState[0]) {
+    camera.position.x = pcState[1];
+    camera.position.y = pcState[2];
+    camera.position.z = pcState[3];
+    camera.rotation.y = pcState[4];
   }
+
+  console.log(window.screen.availWidth);
+  // console.log(projectsPosition);
+
+// console.log(document.getElementById('projects').clientHeight);
+// console.log(document.getElementById('projects_bulk').clientHeight);
+
+
 
   // if (hasNotStopAboutMe && -t >= aboutMeState[0]) {
   //   stopScroll(-aboutMeState[0]);
@@ -157,12 +185,16 @@ function moveCamera() {
   //   setTimeout(letScroll, 3000);
   // }
 
+
 }
 
+//lets the user scroll, sets scrolling to move the camera 
 function letScroll() {
   document.body.onscroll = moveCamera;
 }
 
+
+//stops the user from scrolling 
 function stopScroll(pos) {
   document.body.onscroll = function() {
     window.scrollTo(0, -pos);
@@ -170,17 +202,38 @@ function stopScroll(pos) {
 }
 
 
-//returns the next position
+//returns the next camera position
 function getNextPos(t, index, arrStart, arrEnd) {
   return ((-t * (arrEnd[index] - arrStart[index])) / arrEnd[0]) + arrStart[index];
 }
 
-document.body.onscroll = moveCamera;
+document.getElementById("about-me-button").addEventListener("click", scrollToAboutMe, false);
+document.getElementById("projects-button").addEventListener("click", scrollToProjects, false);
+
+function scrollToAboutMe() {
+  window.scroll({
+    top: aboutMePosition,
+    behavior: 'smooth'
+  });
+}
+
+function scrollToProjects() {
+  window.scroll({
+    top: document.getElementById('projects').getBoundingClientRect().top,
+    behavior: 'smooth'
+  });
+}
+
 
 function render() {
   renderer.render(scene, camera);
 }
 
 
+//initialize page
+
+
+
+document.body.onscroll = moveCamera;
 moveCamera();
 animate();
