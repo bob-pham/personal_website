@@ -1,9 +1,9 @@
 import './css/style.css'
 
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+// import * as THREE from 'three';
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+// import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 
 
 
@@ -59,7 +59,7 @@ scene.add(pointLight, ambientLight);
 //----------------------------
 
 //loads blender model
-const loader = new GLTFLoader();
+const loader = new THREE.GLTFLoader();
   loader.load( '/blender_assets/SCENE.gltf', function ( gltf ) {
     scene.add( gltf.scene );
     
