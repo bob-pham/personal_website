@@ -1,7 +1,7 @@
 import './css/style.css'
 
-import * as THREE from 'https://cdn.skypack.dev/three@0.129.0/build/three.module.js';
-import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 
 
@@ -56,9 +56,10 @@ scene.add(pointLight, ambientLight);
 
 //----------------------------
 
+
 //loads blender model
 const loader = new GLTFLoader();
-  loader.load( '/blender_assets/SCENE.gltf', function ( gltf ) {
+  loader.load( './blender_assets/SCENE.gltf', function ( gltf ) {
     scene.add( gltf.scene );
     
     gltf.scene.rotateY(Math.PI / 2);
