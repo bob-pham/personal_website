@@ -14,15 +14,9 @@
     <link rel="stylesheet" href="/css/carousel.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
     <base href="./">
-    <script type="importmap">
-      {
-          "imports": {
-              "three": "./build/three.module.js",
-              "three/examples/jsm/controls/OrbitControls":"./jsm/controls/OrbitControls.js",
-              "three/examples/jsm/libs/stats.module":"./jsm/libs/stats.module.js",
-          }
-      }
-  </script>
+    <script type="module">
+      import three from 'https://cdn.skypack.dev/three';
+    </script>
     <title>Bob Pham</title>
   </head>
   <body>
