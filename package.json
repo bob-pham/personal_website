@@ -16,6 +16,5 @@
   "dependencies": {
     "github-calendar": "^2.2.9",
     "three": "^0.128.0"
-  },
-  "files": ["./images", "./blender_assets"]
+  }
 }
