@@ -12,13 +12,13 @@ const SPIN_RATE = 0.003;
 const SPIN_FIX_RATE = 0.05;
 // States organized [pos_from_top, x, y, z, rotation_y]
 
-const aboutMePosition = document.getElementById('about_me').getBoundingClientRect().top;
-const projectsPosition = document.getElementById('projects').getBoundingClientRect().top - document.getElementById('projects').clientHeight - document.getElementById('projects_bulk').clientHeight;
-const transitionPosition = projectsPosition - aboutMePosition;
-const initialState = [0, 0.75, 1.6, 2.5, 0];
-const aboutMeState = [aboutMePosition, 1.4, 1.7, 0, Math.PI / 2];
-const transState = [transitionPosition, 0.5, 1.6, -2, Math.PI];
-const pcState = [projectsPosition, 0.68, 1.3, -0.15, (3 * Math.PI) / 2];
+let aboutMePosition = document.getElementById('about_me').getBoundingClientRect().top;
+let projectsPosition = document.getElementById('projects').getBoundingClientRect().top - document.getElementById('projects').clientHeight - document.getElementById('projects_bulk').clientHeight;
+let transitionPosition = projectsPosition - aboutMePosition;
+let initialState = [0, 0.75, 1.6, 2.5, 0];
+let aboutMeState = [aboutMePosition, 1.4, 1.7, 0, Math.PI / 2];
+let transState = [transitionPosition, 0.5, 1.6, -2, Math.PI];
+let pcState = [projectsPosition, 0.68, 1.3, -0.15, (3 * Math.PI) / 2];
 // const pcState = [projectsPosition, 0.68, 1.3, -0.12, (3 * Math.PI) / 2];
 
 
@@ -60,7 +60,7 @@ scene.add(pointLight, ambientLight);
 
 //loads blender model
 const loader = new GLTFLoader();
-  loader.load( 'blender_assets/SCENE.gltf', function ( gltf ) {
+  loader.load( '/blender_assets/SCENE.gltf', function ( gltf ) {
     scene.add( gltf.scene );
     
     gltf.scene.rotateY(Math.PI / 2);
@@ -159,13 +159,6 @@ function moveCamera() {
     camera.position.z = pcState[3];
     camera.rotation.y = pcState[4];
   }
-
-  console.log(window.screen.availWidth);
-  // console.log(projectsPosition);
-
-// console.log(document.getElementById('projects').clientHeight);
-// console.log(document.getElementById('projects_bulk').clientHeight);
-
 
 
   // if (hasNotStopAboutMe && -t >= aboutMeState[0]) {
