@@ -1,4 +1,4 @@
-import './css/style.css'
+import '/style.css'
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -59,7 +59,7 @@ scene.add(pointLight, ambientLight);
 
 //loads blender model
 const loader = new GLTFLoader();
-  loader.load( './blender_assets/SCENE.gltf', function ( gltf ) {
+  loader.load( 'SCENE.gltf', function ( gltf ) {
     scene.add( gltf.scene );
     
     gltf.scene.rotateY(Math.PI / 2);
