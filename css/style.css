@@ -467,12 +467,12 @@
     line-height: normal;
   }
 
-  #projects h1 {
-    font-size: 4rem;
+  .project_container h1 {
+    font-size: 4vw;
     font-family: 'Bebas Neue', sans-serif;
     margin: 0;
     line-height: 1rem;
     text-align: center;
-    padding: 5vh;
+    padding: 1vh;
   }
 }
