@@ -33,21 +33,21 @@
           <div class="info">
             <div class="buttons">
               <button type="button" role="button" id="about-me-button">
-                <img src="images\resume.png" alt="" width=25px height=25px>
+                <img src="images\resume.png" target="_blank" alt="" width=25px height=25px>
                 About Me/Resume
               </button>
               <button type="button" id="projects-button">
-                <img src="images\projects.png" alt="" width=25px height=25px>
+                <img src="images\projects.png" target="_blank" alt="" width=25px height=25px>
                 Projects
               </button>
               
               <a href="https://github.com/bob-pham" >
-                <img src="images\github.png" alt="" width=25px height=25px> 
+                <img src="images\github.png" target="_blank" alt="" width=25px height=25px> 
                 GitHub
               </a>
               
               <a href="https://www.linkedin.com/in/bob-pham-bbb62b218" >
-                <img src="images\linkedin.png" alt="" width=25px height=25px>
+                <img src="images\linkedin.png" target="_blank" alt="" width=25px height=25px>
                 LinkedIn
               </a>
             </div>
@@ -117,7 +117,7 @@
             I am currently interested in internship opportunities. Message me for all inquiries and/or if you're interested in working together on a project!
           </p>
           <div class="link">
-            <a href="Resume.pdf">
+            <a href="Resume.pdf" target="_blank">
               <img src="images/resume.png" alt="resume">
               Resume/CV
             </a>
@@ -159,7 +159,7 @@
                   <li class="carousel__slide">
                     <h3>Hercules</h3>
                     <p> [Proof of concept] android app developed to promote healthy living by gamifying healthy habits</p>
-                    <a class="pages" href="project_pages/hercules.html">Learn More</a>
+                    <a class="pages" target="_blank" href="project_pages/hercules.html">Learn More</a>
                     <br>
                     <br>
                     <span class="tag tag-java">Java</span>
@@ -170,7 +170,7 @@
                   <li class="carousel__slide">
                     <h3>Portfolio Website</h3>
                     <p>This website!</p>
-                    <a class="pages" href="project_pages/website.html">Learn More</a>
+                    <a class="pages" target="_blank" href="project_pages/website.html">Learn More</a>
                     <br>
                     <br>
                     <span class="tag tag-html">HTML5</span>
@@ -180,7 +180,7 @@
                   <li class="carousel__slide">
                     <h3>Simple Device Repair Manager</h3>
                     <p>Desktop application that streamlines the computer repair process by keeping track of progress and parts</p>
-                    <a class="pages" href="project_pages/device_repair.html">Learn More</a>
+                    <a class="pages" target="_blank" href="project_pages/device_repair.html">Learn More</a>
                     <br>
                     <br>
                     <span class="tag tag-java">Java</span>
@@ -227,7 +227,7 @@
                 <li class="carousel__slide">
                   <h3>Cornucopia</h3>
                   <p>App which scans user grocery reciepts to help manager kitchen pantries and minimize food waste</p>
-                  <a class="pages" href="project_pages/cornucopia.html">Learn More</a>
+                  <a class="pages" target="_blank" href="project_pages/cornucopia.html">Learn More</a>
                   <br>
                   <br>
                   <span class="tag tag-python">Python</span>
@@ -239,7 +239,7 @@
                 <li class="carousel__slide">
                   <h3>Advanced Homework Planner</h3>
                   <p>Google Chrome extension that manages user grades and upcoming assignment deadlines</p>
-                  <a class="pages" href="project_pages/advanced_hw_planner.html">Learn More</a>
+                  <a class="pages" target="_blank" href="project_pages/advanced_hw_planner.html">Learn More</a>
                   <br>
                   <br>
                   <span class="tag tag-html">HTML5</span>
@@ -253,7 +253,7 @@
                   <span class="tag tag-cplusplus">C#</span>
                   <span class="tag">Blender</span>
                   <br>
-                  <a class="pages" href="project_pages/rahzel.html">Learn More</a>
+                  <a class="pages" target="_blank" href="project_pages/rahzel.html">Learn More</a>
                 </li>
               </div>
               <div class="carousel__indicators">
@@ -266,7 +266,7 @@
       </div>
       </section>
       <div id="learn_more">
-        <a href="project_pages/all_projects.html">All Projects</a>
+        <a target="_blank" href="project_pages/all_projects.html">All Projects</a>
       </div>
     </main>
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
@@ -470,6 +470,24 @@
       function render() {
         renderer.render(scene, camera);
       }
+
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      
+          //makes sure positions are still properly relative to each other
+          aboutMePosition = document.getElementById('about_me').getBoundingClientRect().top;
+          projectsPosition = document.getElementById('projects').getBoundingClientRect().top - document.getElementById('projects').clientHeight - document.getElementById('projects_bulk').clientHeight;
+          transitionPosition = projectsPosition - aboutMePosition;
+          initialState = [0, 0.75, 1.6, 2.5, 0];
+          aboutMeState = [aboutMePosition, 1.4, 1.7, 0, Math.PI / 2];
+          transState = [transitionPosition, 0.5, 1.6, -2, Math.PI];
+          pcState = [projectsPosition, 0.68, 1.3, -0.12, (3 * Math.PI) / 2];
+        
+          moveCamera();
+    } 
 
 
       //initialize page
