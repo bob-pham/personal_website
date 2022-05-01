@@ -8,176 +8,471 @@
   font-style: normal;
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #282b30;
+  }
 
-main {
-  width: 100vw;
-  color: white;
-  z-index: 99;
-  position: absolute;
-  width: 100%;
-  margin: 0px auto;
-  padding-bottom: 120px;
-  
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  main {
+    width: 100vw;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    margin: 0px auto;
+    padding-bottom: 120px;
+    background-color: #282b30;
+
+  }
+
+  canvas {
+    display: none;
+  }
+
+  header {
+    background: var(--dark-bg);
+    font-size: 3.5rem;
+    text-align: justify;
+    /* margin: 0% !important; */
+  }
+
+  header h1 {
+      margin: 0%;
+      font-size: 17vh;
+      line-height: 9rem; 
+      font-family: 'Bebas Neue', sans-serif;
+  }
+
+  header p {
+      margin: 0%; 
+      font-family: 'Montserrat';
+      font-size: 4vh;
+  }
+
+  section {
+    background: var(--dark-bg);
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+    display: grid;
+    place-items: center;
+    max-width: 99vw;
+  }
+
+  #head_p {
+    margin: 0% !important;
+    font-family: 'Montserrat';
+  }
+
+  .about-me {
+    line-height: 1.02;
+  }
+
+  .about-me h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .about-me p {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: justify;
+  }
+
+
+  .about-me a {
+    margin-top: 1vh;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin-left: 2%;
+  }
+
+  .link {
+    display: grid;
+    place-items: center;
+    margin: 0;
+  }
+
+  .link h2 {
+    margin-bottom: 0;
+  }
+
+  .about-me a img {
+      height: 2.5vh;
+  }
+
+  .info {
+    display: grid;
+    place-items: center;
+  }
+
+  .header {
+    display: grid;
+    place-items: center;
+    width: 50vw;
+  }
+
+  #calendar {
+    display: grid;
+    place-items: center;
+    width: 60vw;
+  }
+
+  .buttons {
+    text-align: justify;
+    color: white;
+    overflow-x: hidden;
+    width: 99vw;
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+  }
+
+  .buttons button {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 1.9em;
+    margin-left: 2%;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-message h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      text-align: center;
+      font-size: 2rem;
+  }
+
+  .mobile-message p {
+      font-family: 'Montserrat', sans-serif;
+      text-align: justify;
+      margin-left: 5vw;
+      margin-right: 5vw;
+  }
+
+  .buttons a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 1.9em;
+    margin-left: 2%;
+  }
+
+  #projects {
+    margin: 0;
+    padding-top: 4%;
+    line-height: normal;
+  }
+
+  #projects h1 {
+    font-size: 4rem;
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    line-height: 1rem;
+    text-align: center;
+    padding: 5vh;
+  }
+
+  .projects h1 {
+      font-size: 4rem;
+      font-family: 'Bebas Neue', sans-serif;
+      margin: 0;
+      line-height: 1rem;
+      text-align: center;
+      padding: 5vh;
+  }
+
+  .projects {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 0;
+    line-height: normal;
+  }
+
+  .project_container {
+    height: 75vh;
+    min-height: 100%;
+    max-height: 100%;
+  }
+
+  .project_container h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      text-align: center;
+      font-size: 10vh;
+  }
+
+  #learn_more {
+    display: grid;
+    place-items: center;
+    background-color: var(--dark-bg);
+    margin-bottom: 1%;
+  }
+
+  #learn_more a {
+    background: #F9FAFE;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 1vh;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+    padding: 0.5%;
+    font-size: 2rem;
+  }
+
+  .header-container {
+    padding: 0px; 
+    margin-bottom: 0px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color:  	#282b30;
-}
 
-header {
-  background: var(--dark-bg);
-  font-size: 3.5rem;
-  text-align: center;
-  margin: 0% !important;
-}
+@media screen and (min-width: 600px) {
 
-section {
-  grid-column: 3 / 11;
-  padding: 1rem;
-  background: var(--dark-bg);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: var(--spacing);
-}
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:  	#282b30;
+  }
 
-.left {
-  grid-column: 6 / 12;
-}
+  main {
+    width: 100vw;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    margin: 0px auto;
+    padding-bottom: 120px;
 
-#head_p {
-  margin: 0% !important;
-  font-family: 'Montserrat';
-}
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
 
-.about-me {
-  grid-column: 2 / span 10;
-  line-height: 1.02;
-  margin-bottom: 1000px;
-}
 
-.about-me h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 150%;
-  text-align: center;
-}
+  header {
+    background: var(--dark-bg);
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 0% !important;
+  }
 
-.about-me p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: medium;
-}
+  section {
+    grid-column: 3 / 11;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
 
-.about-me a {
-  margin-top: 1vh;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
-  margin-left: 2%;
-}
+  .left {
+    grid-column: 6 / 12;
+  }
 
-.link {
-  display: grid;
-  place-items: center;
-  margin: 0;
-}
+  #head_p {
+    margin: 0% !important;
+    font-family: 'Montserrat';
+  }
 
-.link h2 {
-  margin-bottom: 0;
-}
+  .about-me {
+    grid-column: 2 / span 10;
+    line-height: 1.02;
+    margin-bottom: 400vh;
+  }
 
-.about-me a img {
-    height: 2.5vh;
-}
+  .about-me h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 150%;
+    text-align: center;
+  }
 
-.info {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
+  .about-me p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+  }
 
-.header {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr)
-}
+  .about-me a {
+    margin-top: 1vh;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin-left: 2%;
+  }
 
-#calendar {
-  grid-column: 4 / span 6;
-}
+  .link {
+    display: grid;
+    place-items: center;
+    margin: 0;
+  }
 
-.buttons {
-  grid-column: 2 / span 4;
-  text-align: center;
-  color: white;
-  overflow-x: hidden;
-}
+  .link h2 {
+    margin-bottom: 0;
+  }
 
-.buttons button {
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  font-family: 'Bebas Neue';
-  font-size: 1.9em;
-  margin-left: 2%;
-  background: none;
-  border: none;
-  cursor: pointer;
-  /* z-index: -1; */
-}
+  .about-me a img {
+      height: 2.5vh;
+  }
 
-.buttons a {
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  font-family: 'Bebas Neue';
-  font-size: 1.9em;
-  margin-left: 2%;
-}
+  .info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
 
-#projects {
-  margin: 0;
-  background: none;
-}
+  .header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr)
+  }
 
-#projects h1 {
-  font-size: 4rem;
-  font-family: 'Bebas Neue', sans-serif;
-  margin: 0;
-  line-height: 1rem;
-  text-align: center;
-}
+  .buttons {
+    grid-column: 2 / span 4;
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+  }
 
-.projects {
-  background: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 0;
-}
+  .buttons button {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 1.9em;
+    margin-left: 2%;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 
-.project_container {
-  height: 75vh;
-  min-height: 100%;
-  max-height: 100%;
-  grid-column: 3 / 11;
-}
+  .buttons a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 1.9em;
+    margin-left: 2%;
+  }
 
-#learn_more {
-  display: grid;
-  place-items: center;
-}
+  #projects {
+    margin: 0;
+    background: none;
+  }
 
-#learn_more a {
-  background: #F9FAFE;
-  font-family: 'Roboto', sans-serif;
-  border-radius: 1vh;
-  text-align: center;
-  text-decoration: none;
-  color:black;
-  padding: 0.5%;
-  font-size: 2rem;
+  #projects h1 {
+    font-size: 4rem;
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    line-height: 1rem;
+    text-align: center;
+  }
+
+  .projects {
+    background: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 0;
+  }
+
+  .project_container {
+    height: 75vh;
+    min-height: 100%;
+    max-height: 100%;
+    grid-column: 3 / 11;
+  }
+
+  #learn_more {
+    display: grid;
+    place-items: center;
+  }
+
+  #learn_more a {
+    background: #F9FAFE;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 1vh;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+    padding: 0.5%;
+    font-size: 2rem;
+  }
+
+  .header-container {
+    padding: 0px;
+    margin-bottom: 0px;
+    grid-column: 1 / span 12;
+  }
+
+  .header header {
+    grid-column: 1 / span 7;
+  }
+
+  header h1 {
+    margin: 0%;
+    font-size: 17vh;
+    line-height: 9rem; 
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  header p {
+      margin: 0%; 
+      font-family: 'Montserrat';
+      font-size: 4vh;
+  }
+
+  #calendar {
+    grid-column: 4 / span 6;
+  }
+
+  .desktop-calendar {
+    grid-column: 8 / span 12; 
+    margin-right: 10%;
+  }
+
+  .mobile-calendar {
+    display: none;    
+  }
+
+  .mobile-message {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    grid-column: 1 / span 12;
+    margin-bottom: 165%; 
+    padding: 0%;
+    overflow-y: hidden;
+  }
+
+  #projects {
+    margin: 0;
+    padding-top: 4%;
+    line-height: normal;
+  }
+
+  #projects h1 {
+    font-size: 4rem;
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    line-height: 1rem;
+    text-align: center;
+    padding: 5vh;
+  }
 }

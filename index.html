@@ -13,220 +13,262 @@
     <link rel="stylesheet" href="css/calendar.css"/>
     <link rel="stylesheet" href="css/carousel.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <base href=".">
     <title>Bob Pham</title>
   </head>
   <body>
     <canvas id="bg"></canvas>
     <main>
+      <main>
+        <section class="header-container">
+          <div class="header">
+            <header>
+              <h1>Bob Pham</h1>
+              <p>Software Engineer / Student</p>
+            </header>
+            <div class="calendar desktop-calendar"></div>
+          </div>
+        </section>
+  
+        <section class="desktop-nav">
+          <div class="info">
+            <div class="buttons">
+              <button type="button" role="button" id="about-me-button">
+                <img src="images\resume.png" alt="" width=25px height=25px>
+                About Me/Resume
+              </button>
+              <button type="button" id="projects-button">
+                <img src="images\projects.png" alt="" width=25px height=25px>
+                Projects
+              </button>
+              
+              <a href="https://github.com/bob-pham" >
+                <img src="images\github.png" alt="" width=25px height=25px> 
+                GitHub
+              </a>
+              
+              <a href="https://www.linkedin.com/in/bob-pham-bbb62b218" >
+                <img src="images\linkedin.png" alt="" width=25px height=25px>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </section>
 
-      <section style="grid-column: 1 / span 12 ;padding: 0px; margin-bottom: 0px;">
-        <div class="header">
-          <header style="grid-column: 1 / span 7;">
-            <h1 style="margin: 0%; font-size: 2em; font-family: 'Bebas Neue', sans-serif;">Bob Pham</h1>
-            <p id="heade_p" style="  margin: 0%; font-family: 'Montserrat'; font-size: 0.5em;">Software Engineer / Student</p>
-          </header>
-          <div style="grid-column: 8 / span 12; margin-right: 10%;" id="calendar" class="calendar"> Loading the data just for you. </div>
+        <section class="mobile-nav">
+          <div class="info">
+            <div class="buttons">
+              <button type="button" role="button" id="about-me-button">
+                <img src="images\resume.png" alt="" width=25px height=25px>
+                About Me/Resume
+              </button>
+            </div>
+            <div class="buttons">
+              <button type="button" id="projects-button">
+                <img src="images\projects.png" alt="" width=25px height=25px>
+                Projects
+              </button>
+            </div>
+            <div class="buttons">
+              <a href="https://github.com/bob-pham" >
+                <img src="images\github.png" alt="" width=25px height=25px> 
+                GitHub
+              </a>
+            </div>
+            <div class="buttons">
+              <a href="https://www.linkedin.com/in/bob-pham-bbb62b218" >
+                <img src="images\linkedin.png" alt="" width=25px height=25px>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </section>
+          
+        <section class="mobile-message">
+          <div class="mobile-message">
+            <h2>
+              This is the mobile version of this site.
+            </h2>
+            <p>Unfortunately, I am having trouble with the deployment of the desktop site, and so currently only the mobile site is being served. The desktop site had a lot more effort put into it, you can read about the implementation and view a demo here:</p>
+          </div>
+          <div style="display: grid; place-content: center;">
+            <a style="height: 2vh; margin: 1vh; text-align: center; padding: 1vh; font-family: 'Bebas Neue', sans-serif;" class="pages" href="project_pages/website.html">Read More</a>
+            <embed style="width: 50vw; height: 30vw;" src="https://www.youtube.com/embed/PFrEKIxIH0Y">
         </div>
-      </section>
-
-      <section style="grid-column: 1 / span 12; margin-bottom: 165%; padding: 0%; max-height: 5%; overflow-y: hidden;">
-        <div class="info">
-          <div class="buttons">
-            <button type="button" role="button" id="about-me-button">
-              <img src="images\resume.png" alt="" width=25px height=25px>
-              About Me/Resume
-            </button>
-            <button type="button" id="projects-button">
-              <img src="images\projects.png" alt="" width=25px height=25px>
-              Projects
-            </button>
-            
-            <a href="https://github.com/bob-pham" >
-              <img src="images\github.png" alt="" width=25px height=25px> 
-              GitHub
-            </a>
-            
-            <a href="https://www.linkedin.com/in/bob-pham-bbb62b218" >
-              <img src="images\linkedin.png" alt="" width=25px height=25px>
-              LinkedIn
+        </section>
+  
+  
+        <section id="about_me" class="about-me">
+          <div class="link">
+            <h2>About Me</h2>
+          </div>
+          <p>
+            Hello! I'm Bob.
+          </p>
+  
+          <p>
+            I am a second-year computer science student at the University of British Columbia and an aspiring software engineer. I am passionate about programming and am continually striving to push my abilities to the next level, understand new technologies, and learn industry practices.
+          </p>
+  
+          <p>
+            I currently have several noteworthy technical projects. I and a team of three others developed an android health app, Hercules. The app incentivizes users to build healthy habits by gamifying healthy living through a quest system. I implemented the backend systems which managed our user experience, in-game currency, item-inventory, and item-shop systems. I developed a simple algorithm to handle the quest and questline distribution system, where users would be rewarded based on consistent continual progress. Hercules is currently available as a proof of concept on my GitHub page. I also have experience working with the web development paradigms of HTML, CSS, JavaScript, and React. I used these technologies to build my portfolio site and a homework managing Chrome Extension, which generates daily to-do lists that would prioritize assignments based on deadlines and weight. Currently, I am working on 'Cornucopia,' an app that scans a user's grocery recipe to help manage their pantry and minimize food waste.
+          </p>
+  
+          <p>
+            I am currently interested in internship opportunities. Message me for all inquiries and/or if you're interested in working together on a project!
+          </p>
+          <div class="link">
+            <a href="Resume.pdf">
+              <img src="images/resume.png" alt="resume">
+              Resume/CV
             </a>
           </div>
+  
+        </section>
+  
+        <div id="projects" class="project_container">
+          <h1>Technical Projects</h1>
+        <section id="projects_bulk" class="projects">
+          <div id="completed_projects" class="card">
+            <div class="carousel-container">
+              <h2>Completed</h2>
+              <div class="carousel my-carousel carousel--translate">
+                <input class="carousel__activator" type="radio" name="carousel" id="first" checked="checked"/>
+                <input class="carousel__activator" type="radio" name="carousel" id="second"/>
+                <input class="carousel__activator" type="radio" name="carousel" id="third"/>
+                <div class="carousel__controls">
+                  <!-- <label class="carousel__control carousel__control--backward" for="J"></label> -->
+                  <label class="carousel__control carousel__control--forward" for="second"></label>
+                </div>
+                <div class="carousel__controls">
+                  <label class="carousel__control carousel__control--backward" for="first"></label>
+                  <label class="carousel__control carousel__control--forward" for="third"></label>
+                </div>
+                <div class="carousel__controls">
+                  <label class="carousel__control carousel__control--backward" for="second"></label>
+                  <!-- <label class="carousel__control carousel__control--forward" for="I"></label> -->
+                </div>
+                <div class="carousel__controls">
+                  <label class="carousel__control carousel__control--backward" for="third"></label>
+                  <!-- <label class="carousel__control carousel__control--forward" for="J"></label> -->
+                </div>
+                <div class="carousel__controls">
+                  <!-- <label class="carousel__control carousel__control--backward" for="I"></label> -->
+                  <label class="carousel__control carousel__control--forward" for="first"></label>
+                </div>
+                <div class="carousel__track">
+                  <li class="carousel__slide">
+                    <h3>Hercules</h3>
+                    <p> [Proof of concept] android app developed to promote healthy living by gamifying healthy habits</p>
+                    <a class="pages" href="project_pages/hercules.html">Learn More</a>
+                    <br>
+                    <br>
+                    <span class="tag tag-java">Java</span>
+                    <span class="tag">Android</span>
+                    <span class="tag">XML</span>
+                    <span class="tag">Android Studio</span>
+                  </li>
+                  <li class="carousel__slide">
+                    <h3>Portfolio Website</h3>
+                    <p>This website!</p>
+                    <a class="pages" href="project_pages/website.html">Learn More</a>
+                    <br>
+                    <br>
+                    <span class="tag tag-html">HTML5</span>
+                    <span class="tag tag-css">CSS</span>
+                    <span class="tag tag-jscript">JavaScript</span>
+                  </li>
+                  <li class="carousel__slide">
+                    <h3>Simple Device Repair Manager</h3>
+                    <p>Desktop application that streamlines the computer repair process by keeping track of progress and parts</p>
+                    <a class="pages" href="project_pages/device_repair.html">Learn More</a>
+                    <br>
+                    <br>
+                    <span class="tag tag-java">Java</span>
+                    <span class="tag tag-java">JUnit</span>
+                    <span class="tag tag-java">Java Swing</span>
+                  </li>
+                </div>
+                <div class="carousel__indicators">
+                  <label class="carousel__indicator" for="first"></label>
+                  <label class="carousel__indicator" for="second"></label>
+                  <label class="carousel__indicator" for="third"></label>
+                </div>
+              </div>
+            </div>
         </div>
-      </section>
-
-
-
-      <section style="margin-bottom: 340%;" id="about_me" class="about-me">
-        <div class="about-me link">
-          <h2>About Me</h2>
-        </div>
-        <p>
-          Hello! I'm Bob.
-        </p>
-
-        <p>
-          I am a second-year computer science student at the University of British Columbia and an aspiring software engineer. I am passionate about programming and am continually striving to push my abilities to the next level, understand new technologies, and learn industry practices.
-        </p>
-
-        <p>
-          I currently have several noteworthy technical projects. I and a team of three others developed an android health app, Hercules. The app incentivizes users to build healthy habits by gamifying healthy living through a quest system. I implemented the backend systems which managed our user experience, in-game currency, item-inventory, and item-shop systems. I developed a simple algorithm to handle the quest and questline distribution system, where users would be rewarded based on consistent continual progress. Hercules is currently available as a proof of concept on my GitHub page. I also have experience working with the web development paradigms of HTML, CSS, JavaScript, and React. I used these technologies to build my portfolio site and a homework managing Chrome Extension, which generates daily to-do lists that would prioritize assignments based on deadlines and weight. Currently, I am working on 'Cornucopia,' an app that scans a user's grocery recipe to help manage their pantry and minimize food waste.
-        </p>
-
-        <p>
-          I am currently interested in internship opportunities. Message me for all inquiries and/or if you're interested in working together on a project!
-        </p>
-
-        <div class="about-me link">
-          <a href="ANTH 100A Final Notes.pdf">
-            <img src="images/resume.png" alt="resume">
-            Resume/CV
-          </a>
-        </div>
-
-      </section>
-
-      <div class="project_container">
-      <section id="projects">
-        <h1>Technical Projects</h1>
-      </section>
-      <section id="projects_bulk" class="projects">
         <div id="completed_projects" class="card">
           <div class="carousel-container">
-            <h2>Completed</h2>
+            <h2>WIP</h2>
             <div class="carousel my-carousel carousel--translate">
-              <input class="carousel__activator" type="radio" name="carousel" id="first" checked="checked"/>
-              <input class="carousel__activator" type="radio" name="carousel" id="second"/>
-              <input class="carousel__activator" type="radio" name="carousel" id="third"/>
+              <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
+              <input class="carousel__activator" type="radio" name="carousel" id="G"/>
+              <input class="carousel__activator" type="radio" name="carousel" id="H"/>
               <div class="carousel__controls">
                 <!-- <label class="carousel__control carousel__control--backward" for="J"></label> -->
-                <label class="carousel__control carousel__control--forward" for="second"></label>
+                <label class="carousel__control carousel__control--forward" for="G"></label>
               </div>
               <div class="carousel__controls">
-                <label class="carousel__control carousel__control--backward" for="first"></label>
-                <label class="carousel__control carousel__control--forward" for="third"></label>
+                <label class="carousel__control carousel__control--backward" for="F"></label>
+                <label class="carousel__control carousel__control--forward" for="H"></label>
               </div>
               <div class="carousel__controls">
-                <label class="carousel__control carousel__control--backward" for="second"></label>
+                <label class="carousel__control carousel__control--backward" for="G"></label>
                 <!-- <label class="carousel__control carousel__control--forward" for="I"></label> -->
               </div>
               <div class="carousel__controls">
-                <label class="carousel__control carousel__control--backward" for="third"></label>
+                <label class="carousel__control carousel__control--backward" for="H"></label>
                 <!-- <label class="carousel__control carousel__control--forward" for="J"></label> -->
               </div>
               <div class="carousel__controls">
                 <!-- <label class="carousel__control carousel__control--backward" for="I"></label> -->
-                <label class="carousel__control carousel__control--forward" for="first"></label>
+                <label class="carousel__control carousel__control--forward" for="F"></label>
               </div>
               <div class="carousel__track">
                 <li class="carousel__slide">
-                  <h3>Hercules</h3>
-                  <p> [Proof of concept] android app developed to promote healthy living by gamifying healthy habits</p>
-                  <span class="tag tag-java">Java</span>
-                  <span class="tag">Android</span>
-                  <span class="tag">XML</span>
-                  <span class="tag">Android Studio</span>
+                  <h3>Cornucopia</h3>
+                  <p>App which scans user grocery reciepts to help manager kitchen pantries and minimize food waste</p>
+                  <a class="pages" href="project_pages/cornucopia.html">Learn More</a>
                   <br>
-                  <a class="pages" href="project_pages/hercules.html">Learn More</a>
+                  <br>
+                  <span class="tag tag-python">Python</span>
+                  <span class="tag tag-python">DJango</span>
+                  <span class="tag tag-python">OpenCV</span>
+                  <span class="tag tag-python">React Native</span>
+                  <span class="tag tag-jscript">JavaScript</span>
                 </li>
                 <li class="carousel__slide">
-                  <h3>Portfolio Website</h3>
-                  <p>This website!</p>
+                  <h3>Advanced Homework Planner</h3>
+                  <p>Google Chrome extension that manages user grades and upcoming assignment deadlines</p>
+                  <a class="pages" href="project_pages/advanced_hw_planner.html">Learn More</a>
+                  <br>
+                  <br>
                   <span class="tag tag-html">HTML5</span>
                   <span class="tag tag-css">CSS</span>
                   <span class="tag tag-jscript">JavaScript</span>
-                  <br>
-                  <a class="pages" href="project_pages/website.html">Learn More</a>
                 </li>
                 <li class="carousel__slide">
-                  <h3>Simple Device Repair Manager</h3>
-                  <p>Desktop application that streamlines the computer repair process by keeping track of progress and parts</p>
-                  <span class="tag tag-java">Java</span>
-                  <span class="tag tag-java">JUnit</span>
-                  <span class="tag tag-java">Java Swing</span>
+                  <h3>Rahzel</h3>
+                  <p>Snowboarding video game inspired by the SSX franchise</p>
+                  <span class="tag tag-unreal">Unity</span>
+                  <span class="tag tag-cplusplus">C#</span>
+                  <span class="tag">Blender</span>
                   <br>
-                  <a class="pages" href="project_pages/device_repair.html">Learn More</a>
+                  <a class="pages" href="project_pages/rahzel.html">Learn More</a>
                 </li>
               </div>
               <div class="carousel__indicators">
-                <label class="carousel__indicator" for="first"></label>
-                <label class="carousel__indicator" for="second"></label>
-                <label class="carousel__indicator" for="third"></label>
+                <label class="carousel__indicator" for="F"></label>
+                <label class="carousel__indicator" for="G"></label>
+                <label class="carousel__indicator" for="H"></label>
               </div>
             </div>
           </div>
       </div>
-      <div id="completed_projects" class="card">
-        <div class="carousel-container">
-          <h2>WIP</h2>
-          <div class="carousel my-carousel carousel--translate">
-            <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
-            <input class="carousel__activator" type="radio" name="carousel" id="G"/>
-            <input class="carousel__activator" type="radio" name="carousel" id="H"/>
-            <div class="carousel__controls">
-              <!-- <label class="carousel__control carousel__control--backward" for="J"></label> -->
-              <label class="carousel__control carousel__control--forward" for="G"></label>
-            </div>
-            <div class="carousel__controls">
-              <label class="carousel__control carousel__control--backward" for="F"></label>
-              <label class="carousel__control carousel__control--forward" for="H"></label>
-            </div>
-            <div class="carousel__controls">
-              <label class="carousel__control carousel__control--backward" for="G"></label>
-              <!-- <label class="carousel__control carousel__control--forward" for="I"></label> -->
-            </div>
-            <div class="carousel__controls">
-              <label class="carousel__control carousel__control--backward" for="H"></label>
-              <!-- <label class="carousel__control carousel__control--forward" for="J"></label> -->
-            </div>
-            <div class="carousel__controls">
-              <!-- <label class="carousel__control carousel__control--backward" for="I"></label> -->
-              <label class="carousel__control carousel__control--forward" for="F"></label>
-            </div>
-            <div class="carousel__track">
-              <li class="carousel__slide">
-                <h3>Cornucopia</h3>
-                <p>App which scans user grocery reciepts to help manager kitchen pantries and minimize food waste</p>
-                <span class="tag tag-python">Python</span>
-                <span class="tag tag-python">DJango</span>
-                <span class="tag tag-python">OpenCV</span>
-                <span class="tag tag-python">React Native</span>
-                <span class="tag tag-jscript">JavaScript</span>
-                <br>
-                <a class="pages" href="project_pages/cornucopia.html">Learn More</a>
-              </li>
-              <li class="carousel__slide">
-                <h3>Advanced Homework Planner</h3>
-                <p>Google Chrome extension that manages user grades and upcoming assignment deadlines</p>
-                <span class="tag tag-html">HTML5</span>
-                <span class="tag tag-css">CSS</span>
-                <span class="tag tag-jscript">JavaScript</span>
-                <br>
-                <a class="pages" href="project_pages/advanced_hw_planner.html">Learn More</a>
-              </li>
-              <li class="carousel__slide">
-                <h3>Rahzel</h3>
-                <p>Snowboarding video game inspired by the SSX franchise</p>
-                <span class="tag tag-unreal">Unreal Engine 5</span>
-                <span class="tag tag-cplusplus">C++</span>
-                <span class="tag">Blender</span>
-                <br>
-                <a class="pages" href="project_pages/rahzel.html">Learn More</a>
-              </li>
-            </div>
-            <div class="carousel__indicators">
-              <label class="carousel__indicator" for="F"></label>
-              <label class="carousel__indicator" for="G"></label>
-              <label class="carousel__indicator" for="H"></label>
-            </div>
-          </div>
-        </div>
-    </div>
       </section>
       <div id="learn_more">
         <a href="project_pages/all_projects.html">All Projects</a>
       </div>
-    </div>
-
     </main>
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <script> GitHubCalendar(".calendar", "bob-pham", {responsive: true}); </script>  
@@ -246,7 +288,6 @@
       let aboutMeState = [aboutMePosition, 1.4, 1.7, 0, Math.PI / 2];
       let transState = [transitionPosition, 0.5, 1.6, -2, Math.PI];
       let pcState = [projectsPosition, 0.68, 1.3, -0.15, (3 * Math.PI) / 2];
-      // const pcState = [projectsPosition, 0.68, 1.3, -0.12, (3 * Math.PI) / 2];
 
 
       let spinning = true;
